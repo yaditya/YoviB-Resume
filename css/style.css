@@ -1,0 +1,611 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, 
+caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline; background: transparent;}
+
+/* =============================================================================
+	 HTML5 element display
+	 ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+                  
+/* =============================================================================
+	 Base
+	 ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *	http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *	www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *	www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; /*overflow: hidden;*/}
+
+body { margin: 0; font-size: 13px; line-height: 1.231; background-color: #FAFAFA; }
+
+body, button, input, select, textarea { font-family: 'Yanone Kaffeesatz', serif; color: #222; }
+
+/*
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ */
+
+::-moz-selection { background: #004476; color: #fff; text-shadow: none; }
+::selection { background: #004476; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+	 Links
+	 ========================================================================== */
+
+a {text-decoration: none; color: #FAFAFA; cursor: pointer; z-index: 99999; outline: none; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; }
+
+/* =============================================================================
+	 Typography
+	 ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+	 Lists
+	 ========================================================================== */
+
+ul, ol { list-style: none; /*margin: 1em 0; padding: 0 0 0 40px;*/ }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+	 Embedded content
+	 ========================================================================== */
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow displayed oddly in IE9
+ */
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* =============================================================================
+	 Figures
+	 ========================================================================== */
+
+figure { margin: 0; }
+
+/* =============================================================================
+	 Forms
+	 ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+/*
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+/* Colors for form validity */
+input:valid, textarea:valid { }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+	 Tables
+	 ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* =============================================================================
+	 Primary styles
+	 Author: Yovi Budirahardjo
+	 ========================================================================== */
+/* =============================================================================
+	 Typography
+	 ========================================================================== */
+p {float: left; color:#fafafa; font-size: 1em; line-height: 26px; font-family: Helvetica;}
+
+h1 {color: #43c204; font-size: 3em; line-height: 60px; font-weight: 100;} 
+
+h2 {color:#43c204;font-size: 100px; float: left; width: 560px; line-height: 26px; font-weight: normal; margin: 20px 0 20px 40px;} 
+
+
+/* highlight */
+.highlight{ color: #43c204; } 
+
+ 
+/* color picker */
+#colorSelector {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    width: 30px; 
+    height: 30px; 
+    background-image: url('../images/color.png') ;
+    -webkit-border-radius: 32px; background-position: -1px -1px;
+    -moz-border-radius: 32px;
+    border-radius: 32px;
+    -webkit-box-shadow: 0px 0px 10px 0px #43c204;
+    -moz-box-shadow: 0px 0px 10px 0px #43c204;
+    box-shadow: 0px 0px 10px 0px #43c204;
+}  
+
+
+/* load */
+#load {position: absolute; top: 0px; left: 0px; z-index: 99999999999999999999; width: 100%; height: 100%; background: #fafafa;}
+#loadText {position: absolute; width: 100%; height: 20px; line-height: 20px; color: #43c204; font-family: Helvetica; font-size: 13px; text-align: center; 
+left: 0px; top: 50%; margin: -10px 0 0 0;}
+ 
+
+/* page wrap */
+#wrap { /*position:absolute; left:50%; top:45%; z-index: -1; margin:-270px 0 0 -241px;*/ width: 37.1em; margin: 10em auto 0; position: relative; overflow: hidden; display: none; }
+
+/* pages */
+.page { /*position: relative; left: 1px; top: 60px;*/ position: absolute; top: 7em; width: 37em; height: 38em; background: none; padding: 0px; line-height: 20px; margin: 0; }   
+
+
+/* HEADER */
+
+header { /*float: left; width: 100%; text-align: center;*/ margin: 0 0 20px 0; overflow: hidden; }
+
+/* logo */
+a.logo { float: left; font-size: 3em; color: #43c204; font-family: 'Yanone Kaffeesatz', serif; font-weight: bold; }
+a.logo:first-letter {}
+a.logo span { font-size: 0.6em; line-height: 1; color: #1f1f1f; display: block; }
+
+/* download button */ 
+.download {float: right;  height: 20px; margin: 20px 0px 0 0px;
+background-repeat: no-repeat; 
+background-position: right center;
+background-color: #43c204; 
+background-image: url('../images/down.png'); 
+transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;    /* FF3.7+ */
+      -o-transition: all 0.2s ease-out;      /* Opera 10.5 */
+      -webkit-transition:all 0.2s ease-out; /* Saf3.2+, Chrome */} 
+	  .download:hover { background-color: #1f1f1f;} 
+	  
+.resume {
+	float: right;
+	margin-top: 1.5em;
+	height: 2.5em;
+	background: url(../images/cv.png) no-repeat right center;
+	outline: none;
+}
+.resume span:hover {
+	text-decoration: underline;
+}
+ .resume span {
+ 	float: right;
+ 	margin-right: 3em;
+ 	color: #1F1F1F;
+ 	font-family: Helvetica;
+ 	font-size: 1em;
+ 	line-height: 3;
+ 	
+ }
+ 
+/*menu button */
+.menuButton { 
+	position: absolute; width:4.5em; z-index: 999999991; height: 4.5em; top:23em; left: 16.2em;  
+	overflow: hidden;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0; 
+	background: #fafafa;
+	opacity: 0;
+	-webkit-border-radius: 4em; 
+	-moz-border-radius: 4em;
+	border-radius: 4em; 
+	-webkit-box-shadow: 0px 0px 10px 0px #FAFAFA;
+	-moz-box-shadow: 0px 0px 10px 0px #FAFAFA;
+	box-shadow: 0px 0px 10px 0px #FAFAFA;
+}   
+.menuButton img{ position: absolute; top: 20px; left: 20px;  width: 20px; height: 20px;
+background-color: #43c204;
+background-image: url('../images/menu.png'); 
+background-repeat: no-repeat; 
+transition: background-color 0.2s ease-out;
+      -moz-transition: background-color 0.4s ease-out;   /* FF3.7+ */
+      -o-transition: background-color 0.4s ease-out;      /* Opera 10.5 */
+      -webkit-transition: background-color 0.4s ease-out; /* Saf3.2+, Chrome */} 
+.menuButton:hover > img { background-color: #1f1f1f;} 
+
+
+/* HOME (Navigation) */
+nav { clear: both; overflow: hidden; }
+nav ul { position: relative; /*width: 481px; height: 481px;*/ width: 37em; height: 37em; text-align: center; }
+nav ul li { 
+    position: absolute; 
+    width: 240px; 
+    height: 240px; 
+    margin: 0px; 
+    line-height: 20px;
+    -moz-border-radius-topleft: 80px; 
+    overflow: hidden; 
+    z-index: 42;  
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 80px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 80px 0px 80px 0px;
+    border-radius: 80px 0px 80px 0px;
+    background-color: #1f1f1f;
+    transition: background-color 0.4s ease-out;
+    -moz-transition: background-color 0.4s ease-out; /* FF3.7+ */
+    -o-transition: background-color 0.4s ease-out;      /* Opera 10.5 */
+    -webkit-transition: background-color 0.4s ease-out; /* Saf3.2+, Chrome */} 
+      
+nav  ul li:nth-child(1), nav  ul li:nth-child(4) {
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 80px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 80px;
+    -webkit-border-radius: 0px 80px 0px 80px;
+    border-radius: 0px 80px 0px 80px;
+} 
+nav ul li:hover {
+    background-color: #43c204;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+} 
+nav ul li:nth-child(1) {
+    bottom: 241px;
+    right: 241px; 
+    background-image: linear-gradient(135deg, rgba(153,51,255,0.9) 0%, rgba(0,102,204,0) 100%);
+    background-image: -o-linear-gradient(135deg, rgba(153,51,255,0.9) 0%, rgba(31,31,31,0) 100%);
+    background-image: -moz-linear-gradient(135deg, rgba(153,51,255,0.9) 0%, rgba(31,31,31,0) 100%);
+    background-image: -webkit-linear-gradient(135deg, rgba(153,51,255,0.9) 0%, rgba(31,31,31,0) 100%);
+    background-image: -ms-linear-gradient(135deg, rgba(153,51,255,0.9) 0%, rgba(31,31,31,0) 100%);
+}
+nav  ul li:nth-child(1) a {position: absolute; bottom: 60px; right: 60px; }
+
+nav  ul li:nth-child(2) {
+    bottom: 241px; left: 241px;
+    background-image: linear-gradient(45deg, rgba(255,204,0,0.9) 0%, rgba(31,31,31,0) 100%);
+    background-image: -o-linear-gradient(45deg, rgba(255,204,0,0.9) 0%, rgba(31,31,31,0) 100%);
+    background-image: -moz-linear-gradient(45deg, rgba(255,204,0,0.9) 0%, rgba(31,31,31,0) 100%);
+    background-image: -webkit-linear-gradient(45deg, rgba(255,204,0,0.9) 0%, rgba(31,31,31,0) 100%);
+    background-image: -ms-linear-gradient(45deg, rgba(255,204,0,0.9) 0%, rgba(31,31,31,0) 100%); }
+nav  ul li:nth-child(2) a {position: absolute; bottom: 60px; left: 60px; }
+
+nav  ul li:nth-child(3) {
+	top: 241px;
+	right: 241px;
+	background-image: linear-gradient(225deg, rgba(102,204,255,0.9) 0%, rgba(31,31,31,0) 100%);
+	background-image: -o-linear-gradient(225deg, rgba(102,204,255,0.9) 0%, rgba(31,31,31,0) 100%);
+	background-image: -moz-linear-gradient(225deg, rgba(102,204,255,0.9) 0%, rgba(31,31,31,0) 100%);
+	background-image: -webkit-linear-gradient(225deg, rgba(102,204,255,0.9) 0%, rgba(31,31,31,0) 100%);
+	background-image: -ms-linear-gradient(225deg, rgba(102,204,255,0.9) 0%, rgba(31,31,31,0) 100%);
+}
+nav  ul li:nth-child(3) a {
+	position: absolute; top: 60px; right: 60px;
+}
+
+nav  ul li:nth-child(4) {
+	top: 241px;
+	left: 241px;
+	background-image: linear-gradient(315deg, rgba(255,0,0,0.9) 0%, rgba(31,31,31,0) 100%);
+	background-image: -o-linear-gradient(315deg, rgba(255,0,0,0.9) 0%, rgba(31,31,31,0) 100%);
+	background-image: -moz-linear-gradient(315deg, rgba(255,0,0,0.9) 0%, rgba(31,31,31,0) 100%);
+	background-image: -webkit-linear-gradient(315deg, rgba(255,0,0,0.9) 0%, rgba(31,31,31,0) 100%);
+	background-image: -ms-linear-gradient(315deg, rgba(255,0,0,0.9) 0%, rgba(31,31,31,0) 100%);
+}
+nav  ul li:nth-child(4) a { 
+	position: absolute; top: 60px; left: 60px;
+}
+nav ul a { font-size: 34px; }
+
+
+/* ABOUT */
+
+#about {background: none;}
+
+/* testimonials */
+.testimony { float: right; color: #43c204; text-align: right; font-size: 2.3em; line-height: 1; width: 7em;}
+.testimony li span {float: right; font-size: 13px; font-family: Helvetica; color: rgba(31,31,31,0.3); font-style: italic; width: 180px; text-align: right;}
+
+/* skills */
+#skills { margin-top: 19.5em; width: 37em; height: 18.5em; border-bottom: 1px solid #43c204; }
+.skill { position: absolute; bottom: 0px; border: 1px solid #43c204; border-bottom: none; height: 40px; width: 1em; background-color: #333; }
+.skill p { color: rgba(31,31,31,0.6); position: absolute; z-index: 99; left: -1em; font-size: 0.8em; top: -2em}
+.skill p.even { top: -3em; }
+.aboutText { float: left; color: rgba(31,31,31,0.6); width: 12em; font-style: italic; font-size: 1.2em;  }
+.aboutText li { margin: 0.5em 0; }
+#skills h1 { float: left; color: #43c204; font-size: 4em; width:100%; }
+#skill7 {right: 2em;}
+#skill6 {right: 5em;}
+#skill5 {right: 8em;}
+#skill4{right: 11em;}
+#skill3 {right: 14em;}
+#skill2 {right: 17em;}
+#skill1 {right: 20em;}
+
+#work ul.testimony {left: 0px; text-align: left;}
+.testimony li span { text-align: left;}
+
+/* WORK */
+
+#gal {position: relative; width: 482px; height: 482px; top: 0px; left: 0px; } 
+#gal .titles li span span { font-family: 'Yanone Kaffeesatz', serif; font-size: 2em; line-height: 2; color: #1f1f1f; text-shadow: 0px 0px 0 #1f1f1f; padding-left: 0; }
+
+#gal .titles li span { display: block; width: 30em; padding-left: 2em; font-family: Helvetica; color: rgba(31,31,31,0.6); background-color: rgba(250,250,250,0.6); }
+#gal .titles li span p { color: #1f1f1f; float: none; }
+#gal .titles li span p a { color: #1f1f1f; text-decoration: underline; }
+#gal img {position: absolute; top: 0px; left: 0px; width: 482px; height: 482px;}
+
+ a#next {position: absolute;z-index: 999; bottom: 20px; right: 20px; width: 20px; height: 40px; background-image: url('../images/right.png');cursor: pointer;}
+ a#prev {position: absolute;z-index: 992;  bottom: 20px; right: 80px; width: 20px; height: 40px; background-image: url('../images/left.png');cursor: pointer;}
+ 
+ 
+/* SOCIAL */ 
+ 
+.sociala {
+	float: right; overflow: hidden; width: 18.5em; height: 18.5em;
+	-moz-border-radius-topleft: 60px;  
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 60px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius: 60px 0px 60px 0px;
+	border-radius: 60px 0px 60px 0px;
+}
+.sociala a {overflow: hidden;}
+.sociala a:nth-child(1) img, .sociala a:nth-child(1) {
+-moz-border-radius-topleft: 120px;  
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright:  0px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-radius: 120px 0px  0px 0px;
+border-radius: 120px 0px  0px 0px;}
+.sociala a:nth-child(16) img, .sociala a:nth-child(16) {
+-moz-border-radius-topleft: 0px;  
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright:  120px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-radius: 0px 0px  120px 0px;
+border-radius: 0px 0px  120px 0px;}
+.sociala a {float: left;  width: 4.6em; height: 4.6em;
+      transition: background-color 0.4s ease-out;
+      -moz-transition: background-color 0.4s ease-out; /* FF3.7+ */
+      -o-transition: background-color 0.4s ease-out;      /* Opera 10.5 */
+      -webkit-transition: background-color 0.4s ease-out; /* Saf3.2+, Chrome */} 
+
+#social h1 { position: absolute; left: 7.5em; width: 4em; height: 6.15em; top: 7em; }
+.twitter, .facebook, .rss, .linkedin, .google, .skype { background-image: url(../images/icons/icon-sprite.png); background-repeat: no-repeat; width: 5em; height: 5em; text-indent: -999em; }
+.twitter { background-position: 0 -20em; }
+.facebook { background-position: 0 0; }
+.google { background-position: 0 -5em; }
+.linkedin { background-position: 0 -10em; }
+.skype { background-position: 0 -15em; }
+.rss  { background-position: 0 -24.9em; }
+.tweetWrap { width: 17em; height: 17.45em; color: rgba(31,31,31,0.6); font-family: Helvetica; }
+.tweetWrap a { color: #43c204; font-family: Helvetica; font-size: 13px;}
+.tweetWrap li {float: left; height: 60px; overflow: hidden; text-align: right; margin: 0 0 10px 0;}
+.tweet_avatar {float: right; margin: 0 0px 20px 20px;}
+
+
+/* CONTACT */
+  
+#contact {padding: 0; margin: 0;}
+#contact h1 { width: 100%;  margin: 0 0 20px 0; height: 40px; padding: 0;line-height: 0px;}
+#contact form {position: absolute; top: 0px; width: 100%; height: 240px; margin: 0px; padding: 0;}
+#input, #input2{float: left; width: 237px; height: 238px; margin: 0 -1px 0 0; padding: 0; overflow: hidden;border: 1px solid #43c204; z-index: 999;
+-moz-border-radius-topleft: 0px;
+-moz-border-radius-topright: 80px;
+-moz-border-radius-bottomright: 0px;
+-moz-border-radius-bottomleft: 60px;
+-webkit-border-radius: 0px 80px 0px 60px;
+border-radius: 0px 80px 0px 60px;}  
+#input2 {
+-moz-border-radius-topleft: 80px;
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright: 80px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-radius: 80px 0px 80px 0px;
+border-radius: 80px 0px 80px 0px;}  
+#contact input , #contact textarea{float: left; width: 200px; border: none;border-bottom: 1px solid #43c204; color: rgba(31,31,31,0.6); background: none; padding: 0px 0 0 40px;}
+#contact input {height: 59px; }
+#contact input:focus, input:hover, textarea:focus, textarea:hover  {  }
+#contact textarea {padding: 20px 20px 0 40px; height: 159px; margin: 0 0 0px 0; width: 178px;
+-moz-border-radius-topleft: 80px; text-align: right; border-bottom: none;
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright: 0px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-radius: 80px 0px 0px 0px;
+border-radius: 80px 0px 0px 0px;}
+#contact #submit {float: left; padding: 0 80px 0 0px;background-color: #43c204; border: none; height: 60px; 
+font-family: Rosario; font-size: 34px; color: #fafafa; width: 240px; 
+-moz-border-radius-topleft: 0px; cursor: pointer;
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright: 80px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-radius: 0px 0px 80px 0px;
+border-radius: 0px 0px 80px 0px; 
+background-image: linear-gradient(45deg, rgba(31,31,31,0.3) 0%, rgba(31,31,31,0) 100%);
+background-image: -o-linear-gradient(45deg, rgba(31,31,31,0.3) 0%, rgba(31,31,31,0) 100%);
+background-image: -moz-linear-gradient(45deg, rgba(31,31,31,0.3) 0%, rgba(31,31,31,0) 100%);
+background-image: -webkit-linear-gradient(45deg, rgba(31,31,31,0.3) 0%, rgba(31,31,31,0) 100%);
+background-image: -ms-linear-gradient(45deg, rgba(31,31,31,0.3) 0%, rgba(31,31,31,0) 100%);}
+#contact #submit:hover {  }
+#input2 label {position: absolute; right: 40px; top: 17px; width: 60px; font-size: 13px; color: rgba(31,31,31,0.6);font-family: Helvetica; } 
+
+/*contact info */
+.contactTemp { float: left; width: 80%;  }
+.contactTemp p { font-family: 'Yanone Kaffeesatz', serif; color: #1f1f1f; font-size: 1.3em; }
+.contactTemp a, footer a { color: #1f1f1f; text-decoration: underline; }
+.contactInfo { position: absolute; left: 20px; top: 275px; color: #1f1f1f; width: 240px; line-height: 20px;}
+.contactInfo p { width: 60px; color: #43c204; margin: 0  10px 0 0;}
+.contactInfo  .ci1 {float: left; width:60px; margin: 0 20px 0 20px;font-style: italic; text-align: left;}
+.contactInfo .ci2 {float: left; width:120px; }
+.ci2 p {color: rgba(31,31,31,0.6); /*font-style: none;*/ width: 120px;text-align: right;}
+
+ /* validator */
+#input2  label.error , label.error{ position: absolute; color: #d10000; line-height: 0px; width: 200px; margin: -10px 0 0 20px;font-family: Helvetica; font-size: 11px; } 
+label.error { top: 120px; left: 22px; }
+#input2  label.error { top: 56px; left: 318px;}
+
+
+/* FOOTER */
+
+footer { margin-top: 12em; overflow: hidden; }
+footer p { float: left; color: rgba(31,31,31,0.3); margin: 0 5px 0 0; font-family: Helvetica; font-size: 11px;}
+
+/* =============================================================================
+	 Non-semantic helper classes
+	 Please define your styles before this section.
+	 ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br, .none { display: none; }
+
+/* Hide for both screenreaders and browsers:
+	 css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+	www.webaim.org/techniques/css/invisiblecontent/ & j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* =============================================================================
+	 PLACEHOLDER Media Queries for Responsive Design.
+	 These override the primary ('mobile first') styles
+	 Modify as content requires.
+	 ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+	/* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+	/* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+/* =============================================================================
+	 Print styles.
+	 Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+	 ========================================================================== */
+
+@media print {
+	* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+	a, a:visited { color: #444 !important; text-decoration: underline; }
+	a[href]:after { content: " (" attr(href) ")"; }
+	abbr[title]:after { content: " (" attr(title) ")"; }
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } /* Don't show links for images, or javascript/internal links */
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+	tr, img { page-break-inside: avoid; }
+	img { max-width: 100% !important; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3{ page-break-after: avoid; }
+}
