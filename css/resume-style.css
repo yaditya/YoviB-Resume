@@ -209,7 +209,7 @@ h4 { text-transform: uppercase;	font-size: 1em;	font-weight: bold; font-family: 
 
 /* Start Sticky Navigation */
 .radio { text-align: center; }
-nav { position: relative; padding: 2em 0; }
+nav { position: relative; padding: 1em 0; }
 
 /* End Sticky Navigation */
 
@@ -219,8 +219,8 @@ nav { position: relative; padding: 2em 0; }
 .job-title { }
 .slidey { position: relative; background: #f6f6f6; padding: 0 10px; }		
 .slidey.nudge {	overflow: hidden; }	
-.employment, .education, .skills, .contact, .portfolio { margin-bottom: 5em; }
-.education { margin-bottom: 35em; }
+.employment, .education, .skills, .contact, .portfolio { margin-bottom: 3em; }
+.education { margin-bottom: 10em; }
 .technical { float: left; }
 .right-col { margin-left: 5em; }
 
@@ -422,8 +422,8 @@ input.ui-button { padding: .4em 1em; }
 /*button sets*/
 .ui-buttonset { margin: 0; }
 .ui-buttonset .ui-button { margin-left: 0; margin-right: -.3em; }
-.ui-buttonset .ui-button.ui-state-active { color: #1c4257; border-color: #7096ab; }
-.ui-buttonset .ui-button.ui-state-active {
+.ui-buttonset .ui-state-active { color: #1c4257; border-color: #7096ab; }
+.ui-buttonset .ui-state-active {
 	background-image: -webkit-gradient(
     linear,
     left bottom,
@@ -538,7 +538,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     
     nav.fixed { position: fixed; top: 0; left: 0; text-align: center; width: 100%; box-shadow: 0 5px 10px #AAAAAA; background: #f6f6f6 url('../images/fade.png') repeat-x; /* Fallback for Firefox 3.5 and earlier */	background: -moz-linear-gradient(top, #dddddd 0%, #f6f6f6 100%);  /* Firefox 3.6+ */	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(100%,#f6f6f6)); /* Webkit browsers */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#f6f6f6',GradientType=0 ); /* For IE */ }
     
-    .slidey.nudge {	margin-top: 8em; /* Pushes the main content down below the navigation */ overflow: hidden; }
+    .slidey.nudge {	margin-top: 10em; /* Pushes the main content down below the navigation */ overflow: hidden; }
     
 /* ============
     WIDE: Main
