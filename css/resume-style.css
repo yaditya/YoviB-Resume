@@ -220,7 +220,7 @@ nav { position: relative; padding: 1em 0; }
 .slidey { position: relative; background: #f6f6f6; padding: 0 10px; }		
 .slidey.nudge {	overflow: hidden; }	
 .employment, .education, .skills, .contact, .portfolio { margin-bottom: 3em; }
-.education { margin-bottom: 10em; }
+.education { margin-bottom: 20em; }
 .technical { float: left; }
 .right-col { margin-left: 5em; }
 
